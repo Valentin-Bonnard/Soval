@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Bonnard Valentin | A Propos";
+    ViewBag.CopyRight = "© 2016 Bonnard Valentin - ASP.Net MVC 5 Razor Application";
+}
+<div class="profile"></div>
+<div class="about col-md-1">
+    <h1 class="fc-r2 white--font"> Hey I'm Valentin - A C#/Dot.Net Developper.</h1>
+    <span class="tiny-straight-line white--bg"></span>
+    <p class="white--font">@ViewBag.Message</p>
+</div>
+<div class="about--link">
+    <div class="info-pri info-min">
+        <div class="info--link col-md-2">
+            <h5>Tools</h5>
+            <span class="pack--info--right"></span></span><span class="pack--info--left"></span>
+            <div class="contain">
+                <p>Visual studio 2013/2015 - Notepad ++</p>
+            </div>
+        </div>
+        <div class="info--link col-md-2">
+            <h5>Language</h5>
+            <span class="pack--info--right "></span></span><span class="pack--info--left about--line"></span>
+            <div class="contain">
+                <p>French (native) - English (good)</p>
+            </div>
+        </div>
+        <div class="info--link col-md-2">
+            <h5>Github</h5>
+            <span class="pack--info--right"></span></span><span class="pack--info--left about--line"></span>
+            <div class="contain">
+                <a href="https://github.com/" target="_blank">Github.com</a>
+            </div>
+        </div>
+        <div class="info--link col-md-2">
+            <h5>Resume</h5>
+            <span class="pack--info--right"></span></span><span class="pack--info--left"></span>
+            <div class="contain">
+                <a> Download </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="skills">
+    {
+    @Html.Partial("_Circles")
+    }
+</div>

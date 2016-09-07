@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Work_Preview";
+    ViewBag.MessageWp1 = "Site web conçu grace aux language Html5, Css3, Jquery, C#Dotnet et Asp.Net Mvc 5 Razor";
+}
+
+<div class="full-straight-line white--bg"></div>
+
+<div class="wrapper portfolio">
+    <a href="/Work/Soval" class="item print">
+        <h3 class="item-title">Soval</h3>
+        <hr class="hr-title-top">
+        <p class="item-description">@ViewBag.MessageWp1</p>
+        <hr class="hr-title-bot">
+        <button class="view-more" onclick='window.location = "@Url.Action("Soval", "Work")";'>View more</button>
+        <div class="black-overlay"></div>
+        <div class="background"></div>
+    </a>
+</div>
+

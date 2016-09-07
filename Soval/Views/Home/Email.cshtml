@@ -1,0 +1,46 @@
+﻿@model Soval.Models.EmailModel
+@{
+    ViewBag.Title = "Bonnard Valentin | Email";
+    ViewBag.CopyRight = "© 2016 Bonnard Valentin - ASP.Net MVC 5 Razor Application";
+}
+
+<div class="form-email">
+    <h3 class="fc-r5"> Formulaire de contact </h3>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            @Html.LabelFor(m => m._name, new { @class = "control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m._name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m._name)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m._email, new { @class = "control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m._email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m._email)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m._subject, new { @class = "control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m._subject, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m._subject)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m._comment, new { @class = "control-label" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(m => m._comment, new { @class = "form-control areatext" })
+                @Html.ValidationMessageFor(m => m._comment)
+            </div>
+        </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" name="submit" value="Envoyer" />
+                </div>
+            </div>
+    }
+</div>

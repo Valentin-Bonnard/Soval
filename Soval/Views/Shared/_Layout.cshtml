@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" charset="utf-8">
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>@ViewBag.Title</title>
+    <link href=@Url.Content("~/Content/Stylesheet.css") type="text/css" rel="stylesheet" />
+    <script src="@Url.Content("~/Scripts/overlay.js")" type="text/javascript"></script>
+</head>
+<body>
+    <div class="top-header top-header-fixed">
+        <a href="/" name="Bonnard_Valentin">
+            <img id="logo" src="@Url.Content("~/Content/Pics/Home/lg.png")">
+        </a>
+        <div class="menu">
+            <div id="squeleton" class="overlay">
+                <!-- For create whole black overlay and to close-->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeOverlay()">&times;</a>
+                <div class="overlay-content">
+                    <h1 class="fc-r3">@Html.ActionLink("Work", "Index", "Home")</h1>
+                    <h1 class="fc-r3">@Html.ActionLink("About", "About", "Home")</h1>
+                    <h1 class="fc-r3">@Html.ActionLink("Contact", "Contact", "Home")</h1>
+                </div>
+                <div id="copyRight">
+                    <h6 class="fc-r6">@ViewBag.CopyRight</h6>
+                </div>
+            </div>
+            <button class="m-hamburger m-hamburger--rot" onclick="openOverlay()">
+                <span>toggle menu</span>     <!-- Menu to open overlay -->
+            </button>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        @if (ViewBag.Show == true)
+        {
+            <div class="portfolio-preview body-content">
+                @Html.Partial("_WorkPreview")
+            </div>
+        }
+    </div>
+</body>
+    @section Scripts
+{
+    @Scripts.Render("~/bundle/over-res");
+}
+</html>
