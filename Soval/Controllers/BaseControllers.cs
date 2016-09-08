@@ -25,7 +25,7 @@ namespace Soval.Controllers
             else
             {
                 // chargement de la culture depuis un cookie
-                var cookie = HttpContext.Request.Cookies["MvcApplication1.CurrentUICulture"];
+                var cookie = HttpContext.Request.Cookies["Soval.CurrentUICulture"];
                 var langHeader = string.Empty;
                 if (cookie != null)
                 {
@@ -44,7 +44,7 @@ namespace Soval.Controllers
             }
 
             // sauvegarde de la culture dans un cookie
-            HttpCookie _cookie = new HttpCookie("MvcApplication1.CurrentUICulture", Thread.CurrentThread.CurrentUICulture.Name);
+            HttpCookie _cookie = new HttpCookie("Soval.CurrentUICulture", Thread.CurrentThread.CurrentUICulture.Name);
             _cookie.Expires = DateTime.Now.AddYears(1);
             HttpContext.Response.SetCookie(_cookie);
 
