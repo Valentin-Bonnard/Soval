@@ -121,6 +121,7 @@
     <Content Include="Content\Stylesheet.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="ReadMe.txt" />
     <Content Include="Scripts\circles.js" />
     <Content Include="Scripts\jquery.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
